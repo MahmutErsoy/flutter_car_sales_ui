@@ -1,0 +1,38 @@
+name: flutter_car_sales_ui
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #Default icons asset for Cupertino widgets based on Apple styled icons
+  cupertino_icons: ^1.0.2
+
+  #A flutter plugin for adapting screen and font size.Guaranteed to look good on different models
+  flutter_screenutil: ^5.8.4
+
+  #A Flutter package to use fonts from fonts.google.com
+  google_fonts: ^5.1.0
+
+  #A wrapper around InheritedWidget to make them easier to use and more reusable. 
+  provider: ^6.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+  
+  assets:
+    - assets/
