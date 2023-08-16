@@ -123,7 +123,7 @@ class CarDetailScreenView extends StatelessWidget {
                           style: Theme.of(context).textTheme.headline3!.copyWith(fontWeight: FontWeight.w400),
                         ),
                         TextSpan(
-                          text: " " + StringConstants.more,
+                          text: " ${StringConstants.more}",
                           style: Theme.of(context).textTheme.headline3!.copyWith(
                                 fontWeight: FontWeight.w400,
                                 color: ColorConstants.instance.azureRadiance,
@@ -146,7 +146,7 @@ class CarDetailScreenView extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
-                            Icon(Icons.check_box),
+                            const Icon(Icons.check_box),
                             SizedBox(
                               width: 12.w,
                             ),
@@ -171,7 +171,7 @@ class CarDetailScreenView extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
-                            Icon(Icons.check_box),
+                            const Icon(Icons.check_box),
                             SizedBox(
                               width: 12.w,
                             ),
@@ -275,7 +275,7 @@ class CarDetailScreenView extends StatelessWidget {
                       ),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => WatchVideoScreenView(),
+                          builder: (context) => const WatchVideoScreenView(),
                         ));
                       },
                       child: Text(

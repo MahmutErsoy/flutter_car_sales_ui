@@ -60,4 +60,8 @@ class StringConstants {
   static const String writeDescription = "Write description about your car";
   static const String upload = "Upload images/Video";
   static const String sell = "Sell Your Car";
+  static const String mercedes = "Mercedes";
+  static const String hyundai = "Hyundai";
+  static const String carPrice1 = "Rs.54,77,823,73";
+  static const String carPrice2 = "Rs.5,85,000";
 }
