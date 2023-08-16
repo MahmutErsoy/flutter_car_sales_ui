@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_car_sales_ui/core/components/global_widgets/custom_text_button.dart';
 import 'package:flutter_car_sales_ui/core/constants/assets_constants.dart';
 import 'package:flutter_car_sales_ui/core/constants/colors_constants.dart';
 import 'package:flutter_car_sales_ui/core/constants/string_constants.dart';
 import 'package:flutter_car_sales_ui/views/home_screen/home_screen_view.dart';
-import 'package:flutter_car_sales_ui/views/login_screen/login_screen_widget.dart';
+import 'package:flutter_car_sales_ui/views/sign_up_screen/sign_up_screen_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-
 import '../../core/base/base_view.dart';
+import '../../core/components/global_widgets/custom_text_field.dart';
 import 'sign_up_screen_view_model.dart';
 
 class SignUpScreenView extends StatelessWidget {
@@ -86,50 +87,19 @@ class SignUpScreenView extends StatelessWidget {
                 height: 41.h,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.w),
-                child: TextButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(ColorConstants.instance.blazeOrange),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.sp),
-                        ),
-                      ),
-                      fixedSize: MaterialStateProperty.all<Size>(Size(MediaQuery.of(context).size.height, 64.h)),
-                    ),
+                  padding: EdgeInsets.symmetric(horizontal: 24.w),
+                  child: CustomTextButton(
+                    text: StringConstants.signUp,
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => HomeScreenView(),
                       ));
                     },
-                    child: Text(
-                      StringConstants.signUp,
-                      style: Theme.of(context).textTheme.headline2,
-                    )),
-              ),
+                  )),
               SizedBox(
                 height: 8.h,
               ),
-              Row(
-                children: [
-                  Expanded(
-                      child: Divider(
-                    color: ColorConstants.instance.silver,
-                    thickness: 1.sp,
-                  )),
-                  SizedBox(width: 9.w),
-                  Text(
-                    StringConstants.or,
-                    style: Theme.of(context).textTheme.headline4!.copyWith(color: ColorConstants.instance.silver),
-                  ),
-                  SizedBox(width: 9.w),
-                  Expanded(
-                      child: Divider(
-                    color: ColorConstants.instance.silver,
-                    thickness: 1.sp,
-                  )),
-                ],
-              ),
+              const OrDivider(),
               Text(
                 StringConstants.signWith,
                 style: Theme.of(context).textTheme.headline6!.copyWith(
@@ -139,34 +109,11 @@ class SignUpScreenView extends StatelessWidget {
               SizedBox(
                 height: 10.h,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(AssetsConstants.facebook),
-                  SizedBox(width: 24.w),
-                  Image.asset(AssetsConstants.instagram),
-                  SizedBox(width: 24.w),
-                  Image.asset(AssetsConstants.youtube),
-                ],
-              ),
+              const SocialMediaRow(),
               SizedBox(
                 height: 34.h,
               ),
-              Wrap(
-                children: [
-                  Text(
-                    StringConstants.haveAnAccount,
-                    style: Theme.of(context).textTheme.headline4,
-                  ),
-                  SizedBox(
-                    width: 7.w,
-                  ),
-                  Text(
-                    StringConstants.signIn,
-                    style: Theme.of(context).textTheme.headline5,
-                  ),
-                ],
-              ),
+              const SignInWrap(),
             ],
           ),
         )),
